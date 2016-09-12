@@ -43,10 +43,16 @@ export default class Editor extends React.Component {
       </div>
       <div className="row pad-v">
         <div className="col-sm-12">
-        {show=="url"?<UrlEditor/>:<SlidesEditor/>}
+        {show=="url"?<UrlEditor data={this.state} screenIndex={screenIndex}/>:<SlidesEditor data={this.state} screenIndex={screenIndex}/>}
         </div>
       </div>
       </div>
     );
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const {data,screenIndex}=nextProps;
+    this.state=getStateFrom(data,screenIndex);
+    this.setState({state:this.state});
   }
 }

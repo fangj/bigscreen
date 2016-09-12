@@ -29,7 +29,7 @@ export default class Main extends Component {
         </ul>
       </div>
 
-      <RestReader url='/api/screen' view={Editor}  screenIndex={screenIndex} subscribe={["updated"]}/> 
+      <RestReader url='/api/screen' view={Editor}  screenIndex={""+screenIndex} subscribe={["updated"]}/> 
 
       <div className="footer">
         <p>&copy; 东南大学 2016</p>
