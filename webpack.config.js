@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports={
   entry:{
     index:'./src/index.js',
-    vendor:[]
+    vendor:['superagent','superagent-promise','react-bootstrap-table']
   },
   output:{
     path: path.join(__dirname,"public"),
@@ -15,7 +15,8 @@ module.exports={
         // require("react") is external and available
         //  on the global var React
         "react": "React",
-        "react-dom": "ReactDOM"
+        "react-dom": "ReactDOM",
+        "pubsub-js":"PubSub"
   },
   module:{
     loaders:[

@@ -10,5 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var screenDb = require('./db/screen');
 
 app.use('/api/screen', expressRestResource({ db: screenDb }));
-app.use('/show',require('./router/show'))
+app.use('/show',require('./router/show'));
+require('react-restui/lib/server/uploadify')(app,'uploads'); //for upload_zone
+
 app.listen("3000");

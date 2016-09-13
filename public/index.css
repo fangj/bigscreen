@@ -1,4 +1,13 @@
-.horse {
-  font-size: 100px;
-  color: darkblue;
+.image_uploader img {
+  max-width: 200px;
+  max-height: 100px;
+}
+.upload_zone {
+  background-color: #f60;
+}
+.image_editor img {
+  max-width: 400px;
+  max-height: 200px;
+  padding: 10px 10px 0 0;
+  float: left;
 }

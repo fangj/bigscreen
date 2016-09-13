@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageEditor from './image_editor';
 
 export default class SlidesEditor extends React.Component {
   static propTypes = {
@@ -10,8 +11,9 @@ export default class SlidesEditor extends React.Component {
   }
 
   render() {
+    const {data,screenIndex}=this.props;
     return (
-      <div>SlidesEditor</div>
+      <ImageEditor data={data} screenIndex={screenIndex}/>
     );
   }
 }
