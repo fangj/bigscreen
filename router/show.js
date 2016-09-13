@@ -11,7 +11,7 @@ router.get('/:screenIndex', function(req, res) {
     if(obj.show=="url"){
       res.redirect(obj.url);
     }else{
-      res.json(obj);
+      res.render("images",{slides:obj.slides});
     };
 
   })

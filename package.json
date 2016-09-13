@@ -9,6 +9,7 @@
   "author": "Fang Jian",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.2",
     "fs-extra": "^0.30.0",
     "lodash": "^4.15.0",
     "multer": "^1.2.0",
