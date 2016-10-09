@@ -45,9 +45,9 @@ class ImageEditor extends React.Component {
 
     componentDidMount() {
         const me=this;
-        const {data,screenIndex}=this.props;
         var mySubscriber = function(  url ){
-            console.log("remove", url );
+            const {data,screenIndex}=me.props;
+            console.log("remove", url,'from',data );
             me.removeImage(data,url);
         };
         this.token=PubSub.subscribe( 'img-remove', mySubscriber );
